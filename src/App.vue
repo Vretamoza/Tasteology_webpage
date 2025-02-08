@@ -1,9 +1,10 @@
 <script setup>
+import Title from '@/components/Title.vue'
 
 </script>
 
 <template>
-  <h1>Initial layout</h1>
+   <Title text="What does cooking mean?"></Title>
 </template>
 
 <style scoped>
