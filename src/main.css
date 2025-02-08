@@ -51,3 +51,6 @@
     font-weight: var(--text-light) !important;
   }
   
+  img {
+    cursor: pointer;
+  }
