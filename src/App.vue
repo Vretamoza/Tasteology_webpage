@@ -2,6 +2,9 @@
 import Title from '@/components/Title.vue'
 import Card from '@/components/Card.vue'
 import ImgModal from '@/components/ImgModal.vue'
+import { useDataStore } from '@/stores/data.js'
+
+const dataStore = useDataStore()
 </script>
 
 <template>
@@ -15,32 +18,28 @@ import ImgModal from '@/components/ImgModal.vue'
         <ImgModal src="/src/assets/img/Right Bottom.png" alt="Egg carton" />
       </div>
       <article class="col-12 col-xl-4 order-first order-xl-last">
-        <Title text="What does cooking mean?" class="text-center text-lg-start"></Title>
+        <Title :text="dataStore.firstTitle" class="text-center text-lg-start"></Title>
         <p class="article-description">
-          Is it simply applying heat to a food product? A way of making certain food safe to eat? Or
-          a way to create flavour and make food more appealing? This is just part of what Hervé
-          This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke
-          to him to find out what his experiments have told him. And in the process even discovered
-          the secret to cooking the perfect egg...
+          {{ dataStore.firstParagraph }}
         </p>
 
-        <span class="text-uppercase text-red text-bold text-sm">The perfect egg</span>
+        <span class="text-uppercase text-red text-bold text-sm">{{ dataStore.firstArticle }}</span>
         <p class="text-bold text-md text-white">
-          Keep water between 67 and 68°C for a flavourful, tender yolk
+          {{ dataStore.firstArticleDesc }}
         </p>
       </article>
     </section>
 
     <section class="row second-floor">
-      <Title text="Taste the colours"></Title>
+      <Title :text="dataStore.secondTitle"></Title>
       <div class="col-12 col-md-4">
-        <Card img="/src/assets/img/Red Spoon.png" title="RED" text="Red foods remind us of berries and soft fruits, so we anticipate a sweet taste."></Card>
+        <Card img="/src/assets/img/Red Spoon.png" :title="dataStore.firstCardTitle" :text="dataStore.firstCardText"></Card>
       </div>
       <div class="col-12 col-md-4">
-        <Card img="/src/assets/img/Green Spoon.png" title="Green" text="Red foods remind us of berries and soft fruits, so we anticipate a sweet taste."></Card>
+        <Card img="/src/assets/img/Green Spoon.png" :title="dataStore.secondCardTitle" :text="dataStore.secondCardText"></Card>
       </div>
       <div class="col-12 col-md-4">
-        <Card img="/src/assets/img/White Spoon.png" title="White" text="Red foods remind us of berries and soft fruits, so we anticipate a sweet taste."></Card>
+        <Card img="/src/assets/img/White Spoon.png" :title="dataStore.thirdCardTitle" :text="dataStore.thirdCardText"></Card>
       </div>
     </section>
   </main>
