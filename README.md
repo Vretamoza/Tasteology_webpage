@@ -1,35 +1,20 @@
-# Tasteology_copy
+# Tasteology
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a technical challenge in which a design was implemented using VueJS. It is fully responsive and includes animations in its interactions.
 
-## Recommended IDE Setup
+## Tech stack
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[Vue.js](https://vuejs.org/) as development framework   
+[Bootstrap](https://getbootstrap.com/) as css framework   
+[Pinia](https://pinia.vuejs.org/) for global state management  
+[eslint](https://eslint.org/) as the project's code linter
 
-## Customize configuration
+## Reasoning
+### Pinia usage
+The copy had to be implemented as if it was populated from a CMS, that is why I used this approach, defining the copies in a global store as if they were being obtained from a remote source.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Bootstrap usage
+I used bootstrap for its simplicity on the grid system and also because it is easier to layout responsive designs with it. Also, its built-in components as the Modal, make development a lot faster.
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+### Design system
+I grouped all the defined meassures in the Figma design and made a minimal design system with it in order to have global styles that could be used in all components

@@ -8,13 +8,6 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   plugins: [vue(), vueDevTools()],
   css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `
-          @import "@/scss/_variables.scss";
-        `,
-      },
-    },
   },
   resolve: {
     alias: {
