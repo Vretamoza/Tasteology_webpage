@@ -46,7 +46,7 @@ import ImgModal from '@/components/ImgModal.vue'
   </main>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .article-description {
   color: var(--white-color);
   font-weight: var(--text-light);
@@ -54,9 +54,8 @@ import ImgModal from '@/components/ImgModal.vue'
   line-height: 30px;
 }
 
-.first-floor {
-  img {
+.first-floor img {
     width: 100% !important;
-  }
 }
+
 </style>
