@@ -3,6 +3,7 @@ import Title from '@/components/Title.vue'
 import Card from '@/components/Card.vue'
 import ImgModal from '@/components/ImgModal.vue'
 import { useDataStore } from '@/stores/data.js'
+import { handleClickAnchor } from "@/utils.js"
 
 const dataStore = useDataStore()
 </script>
@@ -23,10 +24,12 @@ const dataStore = useDataStore()
           {{ dataStore.firstParagraph }}
         </p>
 
-        <span class="text-uppercase text-red text-bold text-sm">{{ dataStore.firstArticle }}</span>
-        <p class="text-bold text-md text-white">
-          {{ dataStore.firstArticleDesc }}
-        </p>
+        <a href="#" @click="handleClickAnchor">
+          <span class="text-uppercase text-red text-bold text-sm">{{ dataStore.firstArticle }}</span>
+          <p class="text-bold text-md text-white">
+            {{ dataStore.firstArticleDesc }}
+          </p>
+        </a>
       </article>
     </section>
 
@@ -56,5 +59,7 @@ const dataStore = useDataStore()
 .first-floor img {
     width: 100% !important;
 }
-
+a {
+  text-decoration: none;
+}
 </style>
