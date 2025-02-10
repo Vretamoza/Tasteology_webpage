@@ -12,11 +12,11 @@ const dataStore = useDataStore()
   <main class="container py-5">
     <section class="row first-floor mb-5">
       <div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
-        <ImgModal src="/src/assets/img/Left.png" alt="Boiling food" />
+        <ImgModal src="/img/Left.png" alt="Boiling food" />
       </div>
       <div class="col-12 col-md-6 col-xl-4 d-flex flex-column align-items-center justify-content-between">
-        <ImgModal src="/src/assets/img/Right Top.png" alt="Pills being classified" />
-        <ImgModal src="/src/assets/img/Right Bottom.png" alt="Egg carton" />
+        <ImgModal src="/img/Right Top.png" alt="Pills being classified" />
+        <ImgModal src="/img/Right Bottom.png" alt="Egg carton" />
       </div>
       <article class="col-12 col-xl-4 order-first order-xl-last">
         <Title :text="dataStore.firstTitle" class="text-center text-lg-start"></Title>
@@ -36,13 +36,13 @@ const dataStore = useDataStore()
     <section class="row second-floor">
       <Title :text="dataStore.secondTitle"></Title>
       <div class="col-12 col-md-4">
-        <Card img="/src/assets/img/Red Spoon.png" :title="dataStore.firstCardTitle" :text="dataStore.firstCardText"></Card>
+        <Card img="/img/Red Spoon.png" :title="dataStore.firstCardTitle" :text="dataStore.firstCardText"></Card>
       </div>
       <div class="col-12 col-md-4">
-        <Card img="/src/assets/img/Green Spoon.png" :title="dataStore.secondCardTitle" :text="dataStore.secondCardText"></Card>
+        <Card img="/img/Green Spoon.png" :title="dataStore.secondCardTitle" :text="dataStore.secondCardText"></Card>
       </div>
       <div class="col-12 col-md-4">
-        <Card img="/src/assets/img/White Spoon.png" :title="dataStore.thirdCardTitle" :text="dataStore.thirdCardText"></Card>
+        <Card img="/img/White Spoon.png" :title="dataStore.thirdCardTitle" :text="dataStore.thirdCardText"></Card>
       </div>
     </section>
   </main>
