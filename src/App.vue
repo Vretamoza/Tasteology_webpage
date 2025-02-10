@@ -42,14 +42,16 @@ const imageWhiteSpoon = new URL('@/assets/img/White Spoon.png', import.meta.url)
 
     <section class="row second-floor">
       <Title :text="dataStore.secondTitle"></Title>
-      <div class="col-12 col-md-4">
-        <Card :img="imageRedSpoon" :title="dataStore.firstCardTitle" :text="dataStore.firstCardText"></Card>
-      </div>
-      <div class="col-12 col-md-4">
-        <Card :img="imageGreenSpoon" :title="dataStore.secondCardTitle" :text="dataStore.secondCardText"></Card>
-      </div>
-      <div class="col-12 col-md-4">
-        <Card :img="imageWhiteSpoon" :title="dataStore.thirdCardTitle" :text="dataStore.thirdCardText"></Card>
+      <div class="d-flex flex-column flex-md-row gap-1">
+        <div class="col-12 col-md-4">
+          <Card :img="imageRedSpoon" :title="dataStore.firstCardTitle" :text="dataStore.firstCardText"></Card>
+        </div>
+        <div class="col-12 col-md-4">
+          <Card :img="imageGreenSpoon" :title="dataStore.secondCardTitle" :text="dataStore.secondCardText"></Card>
+        </div>
+        <div class="col-12 col-md-4">
+          <Card :img="imageWhiteSpoon" :title="dataStore.thirdCardTitle" :text="dataStore.thirdCardText"></Card>
+        </div>
       </div>
     </section>
   </main>
