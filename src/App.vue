@@ -6,17 +6,24 @@ import { useDataStore } from '@/stores/data.js'
 import { handleClickAnchor } from "@/utils.js"
 
 const dataStore = useDataStore()
+
+const imageLeft = new URL('@/assets/img/Left.png', import.meta.url).href;
+const imageRightTop = new URL('@/assets/img/Right Top.png', import.meta.url).href;
+const imageRightBottom = new URL('@/assets/img/Right Bottom.png', import.meta.url).href;
+const imageRedSpoon = new URL('@/assets/img/Red Spoon.png', import.meta.url).href;
+const imageGreenSpoon = new URL('@/assets/img/Green Spoon.png', import.meta.url).href;
+const imageWhiteSpoon = new URL('@/assets/img/White Spoon.png', import.meta.url).href;
 </script>
 
 <template>
   <main class="container py-5">
     <section class="row first-floor mb-5">
       <div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
-        <ImgModal src="/img/Left.png" alt="Boiling food" />
+        <ImgModal :src="imageLeft" alt="Boiling food" />
       </div>
       <div class="col-12 col-md-6 col-xl-4 d-flex flex-column align-items-center justify-content-between">
-        <ImgModal src="/img/Right Top.png" alt="Pills being classified" />
-        <ImgModal src="/img/Right Bottom.png" alt="Egg carton" />
+        <ImgModal :src="imageRightTop" alt="Pills being classified" />
+        <ImgModal :src="imageRightBottom" alt="Egg carton" />
       </div>
       <article class="col-12 col-xl-4 order-first order-xl-last">
         <Title :text="dataStore.firstTitle" class="text-center text-lg-start"></Title>
@@ -36,13 +43,13 @@ const dataStore = useDataStore()
     <section class="row second-floor">
       <Title :text="dataStore.secondTitle"></Title>
       <div class="col-12 col-md-4">
-        <Card img="/img/Red Spoon.png" :title="dataStore.firstCardTitle" :text="dataStore.firstCardText"></Card>
+        <Card :img="imageRedSpoon" :title="dataStore.firstCardTitle" :text="dataStore.firstCardText"></Card>
       </div>
       <div class="col-12 col-md-4">
-        <Card img="/img/Green Spoon.png" :title="dataStore.secondCardTitle" :text="dataStore.secondCardText"></Card>
+        <Card :img="imageGreenSpoon" :title="dataStore.secondCardTitle" :text="dataStore.secondCardText"></Card>
       </div>
       <div class="col-12 col-md-4">
-        <Card img="/img/White Spoon.png" :title="dataStore.thirdCardTitle" :text="dataStore.thirdCardText"></Card>
+        <Card :img="imageWhiteSpoon" :title="dataStore.thirdCardTitle" :text="dataStore.thirdCardText"></Card>
       </div>
     </section>
   </main>
